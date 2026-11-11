@@ -10,7 +10,7 @@
 
 set -euo pipefail
 
-VERSION="1.0.0"
+VERSION="1.0.1"
 BASE="https://raw.githubusercontent.com/pterodactyl/generic-eggs/main"
 OUT_DIR="${OUT_DIR:-./eggs}"
 IMPORT=0
@@ -26,16 +26,13 @@ EGGS=(
   "python|python/egg-python-generic.json"
   "java|java/egg-java.json"
   "nodejs|nodejs/egg-node-js-generic.json"
-  "bun|bun/egg-bun.json"
-  "deno|deno/egg-deno-generic.json"
-  "golang|golang/egg-golang-generic.json"
 )
 
 usage() {
   cat <<EOF
 ptero-egg-installer v${VERSION}
 
-Download main generic eggs for Pterodactyl (Python, Java, Node.js, Bun, Deno, Go).
+Download main generic eggs for Pterodactyl (Python, Java, Node.js).
 
 Usage:
   $0 [options]
@@ -80,7 +77,6 @@ for arg in "$@"; do
   esac
 done
 
-# re-parse --out value if passed as separate
 args=("$@")
 for ((i=0; i<${#args[@]}; i++)); do
   if [[ "${args[$i]}" == "--out" && $((i+1)) -lt ${#args[@]} ]]; then

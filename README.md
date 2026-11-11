@@ -9,9 +9,6 @@ Includes:
 | Python Generic | Python 3.7 – 3.13 |
 | Generic Java | Java 8, 11, 16, 17, 19, 21 |
 | Node.js Generic | Node runtimes from yolks |
-| Bun | Bun |
-| Deno | Deno |
-| Go Generic | Go |
 
 Sources: [pterodactyl/generic-eggs](https://github.com/pterodactyl/generic-eggs)
 
